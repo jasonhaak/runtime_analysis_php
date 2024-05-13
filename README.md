@@ -1,4 +1,4 @@
-# Runtime Analysis for AVL-Tree-Insertion, Graph Coloring and Matrix Multiplication
+# Runtime Analysis Enviroment for Algorithms in PHP
 This runtime analysis environment allows to analyse the runtime of an AVL tree, graph colouring and matrix multiplication. The runtime environment  can be used independently of the given algorithms.
 
 The following questions can be anwsered with this implemetation: 
