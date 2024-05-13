@@ -38,13 +38,9 @@ The runtime analysis of the AVL tree is implemented by the `analyse_avl_tree` fu
 ### Graph Coloring Analysis
 The `analyse_graph_coloring` function implements the runtime analysis of graph coloring. In this function, an adjacency matrix of size `n` is created, representing the complete graph. Additionally, an array of length `n` is created for color assignments. The `graph_coloring(0, $adjacency_matrix, $assignments, $size)` function colors the individual nodes of the graph from the adjacency matrix. The number of colors corresponds to the size `n` and, therefore, the number of nodes. The time measurement starts immediately before executing this function and ends after its completion.
 
----
 ## Version History
 ### 1.0 (2024-05-13)
 - First public release
 
----
 ## Author & Licence
 This code was written by Jason Haak and is licensed under the MIT licence.
-
----
