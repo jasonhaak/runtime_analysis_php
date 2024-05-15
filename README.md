@@ -10,7 +10,7 @@ The following questions can be anwsered with this implemetation:
 The runtime measurement can be started with the file `config.php`.
 
 ## Usage and explanation
-The runtime measurement is performed by the `analyse` function using time measurement as a basis. For this, the start time before the function begins and the end time after the function is completed are measured in microseconds using `microtime(true)`. These values are subtracted from each other, and the execution time is printed at the end.
+The runtime measurement is performed by the `analyse` function using time measurement as a basis. For this, the start time before the function begins and the end time after the function is completed are measured in microseconds using `microtime(true)`. These values are subtracted from each other and the execution time is printed at the end.
 
 ```php
 $time_start = microtime(true); // Start time for execution measurement
@@ -36,7 +36,7 @@ The runtime analysis of matrix multiplication is implemented by the `analyse_mat
 The runtime analysis of the AVL tree is implemented by the `analyse_avl_tree` function. First, a new, empty AVL tree is created. Then, an array with numbers from 1 to `n` is generated. The time measurement starts immediately before executing the `$avl_tree->insert_array($avl_array)` function, which successively fills the AVL tree with the numbers from the array. The time measurement ends after executing this function.
 
 ### Graph Coloring Analysis
-The `analyse_graph_coloring` function implements the runtime analysis of graph coloring. In this function, an adjacency matrix of size `n` is created, representing the complete graph. Additionally, an array of length `n` is created for color assignments. The `graph_coloring(0, $adjacency_matrix, $assignments, $size)` function colors the individual nodes of the graph from the adjacency matrix. The number of colors corresponds to the size `n` and, therefore, the number of nodes. The time measurement starts immediately before executing this function and ends after its completion.
+The `analyse_graph_coloring` function implements the runtime analysis of graph coloring. In this function, an adjacency matrix of size `n` is created, representing the complete graph. Additionally, an array of length `n` is created for color assignments. The `graph_coloring(0, $adjacency_matrix, $assignments, $size)` function colors the individual nodes of the graph from the adjacency matrix. The number of colors corresponds to the size `n` and therefore, the number of nodes. The time measurement starts immediately before executing this function and ends after its completion.
 
 ## Version History
 ### 1.0 (2024-05-13)
