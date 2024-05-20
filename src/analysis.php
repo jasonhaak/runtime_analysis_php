@@ -107,8 +107,12 @@ function run_repetitions($number_of_n_values, $n_sizes, $repetitions, $type) {
        $size = $n_sizes[$k];
        $repetition_execution_times = array(); // Array to store the execution times for the current repetition
 
+       echo "Start repetitions for value " . ($k + 1) . " with n = $size" . PHP_EOL;
+      
        // Runs with the determined size to calculate an average
        for ($i = 0; $i < $repetitions; $i++) {
+           echo "Repetition " . ($i + 1) . " is being executed" . PHP_EOL;
+          
            if ($type == "matrix multiplication") {
                $execution_time = analyse_matrix_multiplication($size);
            } elseif ($type == "avl-tree") {
