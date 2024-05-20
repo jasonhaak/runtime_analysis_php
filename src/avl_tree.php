@@ -6,7 +6,7 @@ ini_set("memory_limit", "10240M");
  * 
  * Classes:
  * - AVLNode: Defines a node in the AVL tree with properties value, left and right subtree, and height.
- * - AVLTree: Implements the AVL tree with methods for insertion, deletion, searching, and traversing nodes.
+ * - AVLTree: Implements the AVL tree with methods for insertion and traversing nodes.
  * 
  * Methods:
  * - get_height($node): Returns the height of a node.
