@@ -115,7 +115,7 @@ class AVLTree {
     }
 
     // Left rotation of a subtree with the specified node as root
-    function left_rotate($node) {
+    function rotate_left($node) {
         $right = $node->right;
         $temp = $right->left;
 
@@ -143,19 +143,19 @@ class AVLTree {
 
         // Case 2: Right Rotation
         if ($balance < -1 && $value > $node->right->value) {
-            return $this->left_rotate($node);
+            return $this->rotate_left($node);
         }
 
         // Case 3: Left-right Rotation
         if ($balance > 1 && $value > $node->left->value) {
-            $node->left = $this->left_rotate($node->left);
+            $node->left = $this->rotate_left($node->left);
             return $this->rotate_right($node);
         }
 
         // Case 4: Right-left Rotation
         if ($balance < -1 && $value < $node->right->value) {
             $node->right = $this->rotate_right($node->right);
-            return $this->left_rotate($node);
+            return $this->rotate_left($node);
         }
 
         return $node;
