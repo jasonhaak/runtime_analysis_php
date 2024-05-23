@@ -13,7 +13,7 @@ ini_set("memory_limit", "10240M");
 *   @param int $repetitions: Number of runs for each n value
 *   @param int $n_start_size: Starting size of n (recommended for target time of 30 sec.: Matrix multiplication: 665; AVL tree: 1550000; Graph coloring: 13900)
 *   @param int $step_size: Size of the steps for each run (recommended for target time of 30 sec.: Matrix multiplication: 1; AVL tree: 2000; Graph coloring: 20)
-*   @param string $type: The type of algorithm: "matrix multiplication", "avl-tree" or "graph coloring"
+*   @param string $type: The type of algorithm: "matrix multiplication", "avl-tree", "graph coloring" or "foo"
 *   @return void
 *
 * - determine_size($target_time, $deviation_time, $number_of_n_values, $n_start_size, $step_size, $type):
@@ -30,7 +30,7 @@ ini_set("memory_limit", "10240M");
 *   @param int $number_of_n_values: Number of n values to be determined
 *   @param array $n_sizes: Sizes of the n values
 *   @param int $repetitions: Number of runs for each n value
-*   @param string $type: The type of algorithm: "matrix multiplication", "avl-tree" or "graph coloring"
+*   @param string $type: The type of algorithm: "matrix multiplication", "avl-tree", "graph coloring" or "foo"
 *   @return array Array with the execution times of the repetitions and the average times
 *
 * - display_runtime_analysis($target_time, $deviation_time, $number_of_n_values, $repetitions, $n_start_size, $step_size, $type, $n_sizes, $average_execution_times, $total_execution_times):
@@ -41,7 +41,7 @@ ini_set("memory_limit", "10240M");
 *   @param int $repetitions: Number of runs for each n value
 *   @param int $n_start_size: Starting size of n
 *   @param int $step_size: Size of the steps for each run
-*   @param string $type: The type of algorithm: "matrix multiplication", "avl-tree" or "graph coloring"
+*   @param string $type: The type of algorithm: "matrix multiplication", "avl-tree", "graph coloring" or "foo"
 *   @param array $n_sizes: Sizes of the n values
 *   @param array $average_execution_times: Average times for each n value
 *   @param array $total_execution_times: Execution times of all repetitions
@@ -73,6 +73,8 @@ function determine_size($target_time, $deviation_time, $number_of_n_values, $n_s
                $execution_time = analyse_avl_tree($size);
            } elseif ($type == "graph coloring") {
                $execution_time = analyse_graph_coloring($size);
+           } elseif ($type == "foo") {
+               $execution_time = analyse_foo($size);
            } else {
                trigger_error("Type unknown.", E_USER_ERROR);
            }
@@ -119,7 +121,10 @@ function run_repetitions($number_of_n_values, $n_sizes, $repetitions, $type) {
                $execution_time = analyse_avl_tree($size);
            } elseif ($type == "graph coloring") {
                $execution_time = analyse_graph_coloring($size);
-           }
+           } elseif ($type == "foo") {
+               $execution_time = analyse_foo($size);
+           } 
+          
            $repetition_execution_times[] = $execution_time; // Add execution time to the list of repetitions
 
         }
