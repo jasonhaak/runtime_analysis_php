@@ -10,15 +10,17 @@ ini_set("memory_limit", "10240M");
 * @param int $repetitions: Number of runs for each n value
 * @param int $n_start_size: Starting size of n (recommended for target time of 30 sec.: Matrix multiplication: 665; AVL tree: 1550000; Graph coloring: 13900)
 * @param int $step_size: Size of the steps for each run (recommended for target time of 30 sec.: Matrix multiplication: 1; AVL tree: 2000; Graph coloring: 50)
-* @param string $type: The type of algorithm: "matrix multiplication", "avl-tree" or "graph coloring"
+* @param string $type: The type of algorithm: "matrix multiplication", "avl-tree", "graph coloring" or "foo"
 * @return void
 */
 
 require __DIR__ . "/src/analysis.php";
 require __DIR__ . "/src/avl_tree.php";
+require __DIR__ . "/src/foo.php";
 require __DIR__ . "/src/graph_coloring.php";
 require __DIR__ . "/src/matrix_multiplication.php";
 require __DIR__ . "/src/analysis_avl_tree.php";
+require __DIR__ . "/src/analysis_foo.php"
 require __DIR__ . "/src/analysis_graph_coloring.php";
 require __DIR__ . "/src/analysis_matrix_multiplication.php";
 
@@ -28,7 +30,7 @@ $number_of_n_values = 5;
 $repetitions = 5;
 $n_start_size = 100;
 $step_size = 1;
-$type = "matrix multiplication";
+$type = "foo";
 
 $n_sizes = array(); // Array to store the determined matrix sizes
 $average_execution_times = array(); // Array to store the average execution times
