@@ -24,7 +24,7 @@ require __DIR__ . "/src/analysis_foo.php";
 require __DIR__ . "/src/analysis_graph_coloring.php";
 require __DIR__ . "/src/analysis_matrix_multiplication.php";
 
-$target_time = 0.1;
+$target_time = 1;
 $deviation_time = 0.01;
 $number_of_n_values = 5;
 $repetitions = 5;
