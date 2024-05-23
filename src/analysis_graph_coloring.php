@@ -13,7 +13,6 @@ function analyse_graph_coloring($size) {
 
    $time_start = microtime(true); // Set start time for measurement
    graph_coloring(0, $adjacency_matrix, $assignments, $size); // Execute function
-
    $time_end = microtime(true); // Set end time for measurement
    return $time_end - $time_start; // Calculate execution time
 }
