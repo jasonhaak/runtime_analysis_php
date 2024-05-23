@@ -13,6 +13,7 @@ ini_set("memory_limit", "10240M");
 
 // Example function
 function foo($size) {
+    sleep(1);
     return $size * $size; // Return result
 }
 ?>
