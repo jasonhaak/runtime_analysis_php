@@ -13,7 +13,6 @@ function analyse_matrix_multiplication($size) {
 
    $time_start = microtime(true); // Set start time for measurement
    multiply_matrices($matrix_1, $matrix_2); // Execute function
-
    $time_end = microtime(true); // Set end time for measurement
    return $time_end - $time_start; // Calculate execution time
 }
