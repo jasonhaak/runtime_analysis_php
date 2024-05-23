@@ -20,7 +20,7 @@ require __DIR__ . "/src/foo.php";
 require __DIR__ . "/src/graph_coloring.php";
 require __DIR__ . "/src/matrix_multiplication.php";
 require __DIR__ . "/src/analysis_avl_tree.php";
-require __DIR__ . "/src/analysis_foo.php"
+require __DIR__ . "/src/analysis_foo.php";
 require __DIR__ . "/src/analysis_graph_coloring.php";
 require __DIR__ . "/src/analysis_matrix_multiplication.php";
 
